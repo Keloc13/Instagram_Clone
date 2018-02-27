@@ -98,7 +98,7 @@
         <!--Pic Table View Controller-->
         <scene sceneID="A0v-L4-gN2">
             <objects>
-                <viewController id="a3A-XF-2OV" customClass="PicTableViewController" customModule="instagram" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PicTableViewController" id="a3A-XF-2OV" customClass="PicTableViewController" customModule="instagram" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="onC-OQ-9ez">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -233,7 +233,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="Vda-gN-Z6e">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="ToH-wP-9Mg" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="TabBarController" automaticallyAdjustsScrollViewInsets="NO" id="ToH-wP-9Mg" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="azw-wC-IuH">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
@@ -259,7 +259,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wjc-kW-RYQ">
-                                <rect key="frame" x="0.0" y="64" width="375" height="171"/>
+                                <rect key="frame" x="58" y="64" width="259" height="171"/>
                             </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Please input description" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Pcx-I7-P6h">
                                 <rect key="frame" x="58" y="260" width="259" height="30"/>
@@ -278,9 +278,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="VMz-9T-qb9" firstAttribute="leading" secondItem="vLf-XI-iAQ" secondAttribute="leading" constant="169" id="1lw-6x-bnu"/>
-                            <constraint firstItem="wjc-kW-RYQ" firstAttribute="leading" secondItem="vLf-XI-iAQ" secondAttribute="leading" id="5qK-9Y-n83"/>
+                            <constraint firstItem="wjc-kW-RYQ" firstAttribute="leading" secondItem="vLf-XI-iAQ" secondAttribute="leading" constant="58" id="5qK-9Y-n83"/>
                             <constraint firstItem="vLf-XI-iAQ" firstAttribute="bottom" secondItem="VMz-9T-qb9" secondAttribute="bottom" constant="270" id="Sc0-ps-RAt"/>
-                            <constraint firstItem="wjc-kW-RYQ" firstAttribute="trailing" secondItem="vLf-XI-iAQ" secondAttribute="trailing" id="VwB-Ar-H07"/>
+                            <constraint firstItem="wjc-kW-RYQ" firstAttribute="trailing" secondItem="vLf-XI-iAQ" secondAttribute="trailing" constant="-58" id="VwB-Ar-H07"/>
                             <constraint firstItem="wjc-kW-RYQ" firstAttribute="top" secondItem="vLf-XI-iAQ" secondAttribute="top" id="bLj-N0-YGL"/>
                             <constraint firstItem="vLf-XI-iAQ" firstAttribute="trailing" secondItem="Pcx-I7-P6h" secondAttribute="trailing" constant="58" id="iRB-b5-9dD"/>
                             <constraint firstItem="vLf-XI-iAQ" firstAttribute="trailing" secondItem="VMz-9T-qb9" secondAttribute="trailing" constant="169" id="mUO-tB-nZW"/>
@@ -309,7 +309,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YwN-hf-rDg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="582" y="1703"/>
+            <point key="canvasLocation" x="581.60000000000002" y="1702.3988005997003"/>
         </scene>
         <!--Picture-->
         <scene sceneID="H8v-X4-mRi">

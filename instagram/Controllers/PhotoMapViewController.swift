@@ -39,7 +39,7 @@ class PhotoMapViewController: UIViewController, UIImagePickerControllerDelegate,
         let originalImage = info[UIImagePickerControllerOriginalImage] as! UIImage
         let editedImage = info[UIImagePickerControllerEditedImage] as! UIImage
         
-        instaImage.image = resize(image: originalImage,newSize: CGSize(width: 120, height: 200) )
+        instaImage.image = resize(image: originalImage,newSize: CGSize(width: 200, height: 200) )
         // Do something with the images (based on your use case)
         
         // Dismiss UIImagePickerController to go back to your original view controller

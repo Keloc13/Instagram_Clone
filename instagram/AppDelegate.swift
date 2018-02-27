@@ -23,6 +23,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 configuration.server = "https://gentle-dawn-36017.herokuapp.com/parse"
             })
         )
+        
+        if let currentUser = PFUser.current() {
+            print("Welcome back \(currentUser.username!) 😀")
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let chatViewController = storyboard.instantiateViewController(withIdentifier: "TabBarController")
+            window?.rootViewController = chatViewController
+            
+        }
         // Override point for customization after application launch.
         return true
     }

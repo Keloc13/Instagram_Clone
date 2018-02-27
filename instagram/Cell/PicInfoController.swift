@@ -19,8 +19,9 @@ class PicInfoController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         if let post = post as? Post{
+            timeStampLabel.text = post.createdAt?.description
             captionLabel.text = post.caption
-            likeCountLabel.text = post.likesCount as? String
+            likeCountLabel.text = String(post.likesCount)
         }
         // Do any additional setup after loading the view.
     }
