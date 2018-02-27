@@ -39,16 +39,7 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func onSignUp(_ sender: Any) {
-        let user = PFUser()
-        user.username = userNameField.text
-        user.password = passwordField.text
-        user.signUpInBackground { (success: Bool,error: Error? ) in
-            if success {
-                print("Yay, created a user")
-            } else {
-                print("[Error]")
-            }
-        }
+        self.performSegue(withIdentifier: "register", sender: nil)
     }
     /*
     // MARK: - Navigation

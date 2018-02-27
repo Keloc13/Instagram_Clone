@@ -2,7 +2,7 @@
 
 Instagram is a photo sharing app using Parse as its backend.
 
-Time spent: 10 hours spent in total
+Time spent: 13 hours spent in total
 
 ## User Stories
 
@@ -18,7 +18,7 @@ The following **required** functionality is completed:
 
 The following **stretch** features are implemented:
 
-- [ ] Style the login page to look like the real Instagram login page (+1pt)
+- [X] Style the login page to look like the real Instagram login page (+1pt)
 - [ ] Style the feed to look like the real Instagram feed (+1pt)
 - [ ] User can use a tab bar to switch between all "Instagram" posts and posts published only by the user. AKA, tabs for Home Feed and Profile (+2pt)
 - [ ] Add a custom camera using the CameraManager library (+1pt)
@@ -41,8 +41,8 @@ The following **additional** features are implemented:
 
 Please list two areas of the assignment you'd like to **discuss further with your peers** during the next class (examples include better ways to implement something, how to extend your app in certain ways, etc):
 
-1.
-2.
+1. network request
+2. 
 
 ## Video Walkthrough
 
@@ -62,6 +62,7 @@ List an 3rd party libraries, icons, graphics, or other assets you used in your a
 ## Notes
 
 Describe any challenges encountered while building the app.
+The some challenges that occured was trying to get the network request for the pictures and trying to unwrap them. 
 
 ## License
 

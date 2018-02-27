@@ -32,7 +32,7 @@ class PicTableViewController: UIViewController, UITableViewDataSource, UITableVi
 
     func getQuery() {
         print("made it inside getQuery")
-        self.query.includeKey("username")
+        self.query.includeKey("author")
         print("Made it after query include key")
         self.query.limit = 20
         self.query.findObjectsInBackground{(object: [PFObject]?, error: Error?) in
@@ -73,7 +73,6 @@ class PicTableViewController: UIViewController, UITableViewDataSource, UITableVi
         print("The new caption: ", post.caption)
         cell.descriptionLabel.text = post.caption
         let userPicture = post.media
-        
         userPicture.getDataInBackground({
             (imageData: Data?, error: Error?) -> Void in
             if (error == nil) {
@@ -81,12 +80,7 @@ class PicTableViewController: UIViewController, UITableViewDataSource, UITableVi
                 cell.imageDescript.image = image
             }
         })
-        
-        print("post.author:", post.author)
-        var name = post.author as! PFUser
-        print("Current you", PFUser.current()!.username)
-        print("Value of name: ", name)
-
+        cell.authorName.text = post.author.username!
         return cell
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

@@ -11,6 +11,8 @@ import Parse
 
 class PicInfoController: UIViewController {
 
+    @IBOutlet weak var UsernameLabel: UILabel!
+    @IBOutlet weak var imageScreen: UIImageView!
     @IBOutlet weak var likeCountLabel: UILabel!
     @IBOutlet weak var timeStampLabel: UILabel!
     @IBOutlet weak var captionLabel: UILabel!
@@ -22,6 +24,16 @@ class PicInfoController: UIViewController {
             timeStampLabel.text = post.createdAt?.description
             captionLabel.text = post.caption
             likeCountLabel.text = String(post.likesCount)
+            UsernameLabel.text = post.author.username!
+            let picTemp = post.media
+            
+            picTemp.getDataInBackground({(imageData: Data?, error: Error?) -> Void in
+                if (error == nil) {
+                    let image = UIImage(data:imageData!)
+                    self.imageScreen.image = image
+                }
+            })
+            
         }
         // Do any additional setup after loading the view.
     }
