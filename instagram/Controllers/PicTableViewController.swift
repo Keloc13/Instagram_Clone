@@ -25,11 +25,35 @@ class PicTableViewController: UIViewController, UITableViewDataSource, UITableVi
         getQuery()
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 50
-        timer = Timer.scheduledTimer(timeInterval: 5, target: self, selector: #selector(self.onTimer), userInfo: nil, repeats: true)
+       // timer = Timer.scheduledTimer(timeInterval: 5, target: self, selector: #selector(self.onTimer), userInfo: nil, repeats: true)
+        self.tableView.reloadData()
         let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: #selector(refreshControlAction(_:)), for: UIControlEvents.valueChanged)
         tableView.insertSubview(refreshControl, at: 0)
     }
 
+    
+    @objc func refreshControlAction(_ refreshControl: UIRefreshControl) {
+        
+        // ... Create the URLRequest `myRequest` ...
+        let url = URL(string: "https://www.mlab.com/databases/heroku_x9wc3tgz/collections/Post")!
+        var request = URLRequest(url: url)
+        // Configure session so that completion handler is executed on main UI thread
+        let session = URLSession(configuration: .default, delegate: nil, delegateQueue: OperationQueue.main)
+        let task: URLSessionDataTask = session.dataTask(with: request) { (data: Data?, response: URLResponse?, error: Error?) in
+            
+            // ... Use the new data to update the data source ...
+            self.getQuery()
+            // Reload the tableView now that there is new data
+            self.tableView.reloadData()
+            
+            // Tell the refreshControl to stop spinning
+            refreshControl.endRefreshing()
+        }
+        task.resume()
+    }
+    
+    
     func getQuery() {
         print("made it inside getQuery")
         self.query.includeKey("author")

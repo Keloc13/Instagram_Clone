@@ -13,7 +13,7 @@ The following **required** functionality is completed:
 - [X] The current signed in user is persisted across app restarts (+1pt)
 - [X] User can take a photo, add a caption, and post it to "Instagram" (+2pt)
 - [X] User can view the last 20 posts submitted to "Instagram" (+2pt)
-- [ ] User can pull to refresh the last 20 posts submitted to "Instagram" (+1pt)
+- [X] User can pull to refresh the last 20 posts submitted to "Instagram" (+1pt)
 - [X] User can tap a post to view post details, including timestamp and caption (+2pt)
 
 The following **stretch** features are implemented:
@@ -49,6 +49,10 @@ Please list two areas of the assignment you'd like to **discuss further with you
 Here's a walkthrough of implemented user stories:
 
 <img src='Instagram.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+
+PullDown
+
+<img src="Instagram_pull.gif" title='Pulling'>
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
